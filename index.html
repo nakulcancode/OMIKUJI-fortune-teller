@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Future Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Omikuji Fortune Teller</h1>
+        <p>Click the button below to receive your fortune!</p>
+        <button id="fortuneButton">Get Your Fortune</button>
+
+        <div id="fortuneResult" class="fortune-result">
+            <!-- Fortune will appear here -->
+        </div>
+
+        <div id="shareButtons" class="share-buttons" style="display: none;">
+            <p>Share your fortune:</p>
+            <textarea id="customMessage" placeholder="Customize your share message..."></textarea>
+            <a id="twitterShare" class="share-button" target="_blank">Twitter</a>
+            <a id="linkedinShare" class="share-button" target="_blank">LinkedIn</a>
+            <a id="redditShare" class="share-button" target="_blank">Reddit</a>
+            <button id="copyLink" class="share-button">Copy Link</button>
+        </div>
+
+        <button id="resetButton" style="display: none;">Try Again</button>
+    </div>
+    <footer>
+        <p>Made by <strong>Nakul Bisht</strong> &copy; <span id="year"></span></p>
+    </footer>
+    
+    <style>
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            color: #fff;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
